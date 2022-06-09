@@ -1,19 +1,15 @@
-* {
-  box-sizing: border-box;
-}
-
-input[type="checkbox"] {
-  visibility: hidden;
-  width: 0;
-  height: 0;
-}
-
 label.checkbox {
   display: block;
   position: relative;
   padding-left: 35px;
   font-size: 24px;
   margin: 16px;
+}
+
+input[type="checkbox"] {
+  visibility: hidden;
+  width: 0;
+  height: 0;
 }
 
 .checkmark {
