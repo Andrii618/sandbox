@@ -8,7 +8,7 @@ input[type="checkbox"] {
   height: 0;
 }
 
-.checkbox {
+label.checkbox {
   display: block;
   position: relative;
   padding-left: 35px;
@@ -26,6 +26,6 @@ input[type="checkbox"] {
   background-color: #d3d3d3;
 }
 
-.checkbox input:checked + .checkmark {
+input:checked + .checkmark {
   background-color: #006400;
 }
