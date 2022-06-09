@@ -1,21 +1,31 @@
-li {
-  margin-bottom: 16px;
+* {
+  box-sizing: border-box;
 }
-a[target="_blank"] {
-  border: 2px solid black;
+
+input[type="checkbox"] {
+  visibility: hidden;
+  width: 0;
+  height: 0;
 }
-a[href^="broken"] {
-  border: 2px solid red;
-}
-a[href$=".com"] {
-  margin-left: 50px;
-}
-a[lang*="en"] {
-  font-size: 10px;
-}
-a[href*="www"] {
-  color: green;
-}
-a[title*="popular"] {
+
+.checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
   font-size: 24px;
+  margin: 16px;
+}
+
+.checkmark {
+  display: inline-block;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: 0;
+  top: 0;
+  background-color: #d3d3d3;
+}
+
+.checkbox input:checked + .checkmark {
+  background-color: #006400;
 }
