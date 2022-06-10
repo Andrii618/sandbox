@@ -1,22 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Checkbox</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
-      integrity="sha256-WAgYcAck1C1/zEl5sBl5cfyhxtLgKGdpI3oKyJffVRI="
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css">
-  </head>
+function usersCountByCity4(users) {
+  return users.reduce((acc, { city }) => {
+    acc[city] = (acc[city] || 0) + 1;
+    return acc;
+  }, {});
+}
+/* fourth option */
 
-  <body>
-    <label class="checkbox"
-      >Checkbox
-      <input type="checkbox" />
-      <span class="checkmark"></span>
-    </label>
-  </body>
-</html>
+// examples
+const users = [
+  {
+    id: 888,
+    name: 'Denis',
+    age: 44,
+    city: 'Kyiv',
+  },
+  {
+    id: 333,
+    name: 'Alex',
+    age: 33,
+    city: 'Lviv',
+  },
+  {
+    id: 392,
+    name: 'Nastya',
+    age: 22,
+    city: 'Kyiv',
+  },
+  {
+    id: 123,
+    name: 'Violetta',
+    age: 15,
+    city: 'Odesa',
+  },
+  {
+    id: 640,
+    name: 'Mykola',
+    age: 31,
+    city: 'Lviv',
+  },
+];
+
+console.log(usersCountByCity4(users)); // ===> { 'Kyiv': 2, 'Lviv': 2, 'Odesa': 1 }

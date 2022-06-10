@@ -1,27 +1,49 @@
-label.checkbox {
+* {
+  box-sizing: border-box;
+}
+
+.dropdown {
   display: inline-block;
-  position: relative;
-  padding-left: 35px;
-  font-size: 24px;
   margin: 16px;
+  position: relative;
 }
 
-input[type="checkbox"] {
-  visibility: hidden;
-  width: 0;
-  height: 0;
-}
-
-.checkmark {
+.menu-button {
+  padding: 16px;
+  background-color: rgba(0, 100, 0, 0.8);
   display: inline-block;
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  left: 0;
-  top: 0;
-  background-color: #d3d3d3;
+  color: white;
 }
 
-input:checked + .checkmark {
-  background-color: #006400;
+.menu-button:hover {
+  font-size: 16px;
+  background-color: rgba(0, 100, 0, 1);
+  color: white;
+  cursor: pointer;
+  display: block;
+}
+
+.menu-list {
+  position: absolute;
+  display: none;
+  margin: 0px;
+  padding: 0px;
+  background-color: lightcyan;
+  color: black;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  min-width: 120px;
+  z-index: 1;
+  list-style: none;
+}
+
+.menu-item {
+  padding: 16px;
+}
+
+.menu-item:hover {
+  background-color: ghostwhite;
+}
+
+.dropdown:hover .menu-list {
+  display: block;
 }
