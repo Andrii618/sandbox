@@ -1,49 +1,86 @@
-* {
-  box-sizing: border-box;
+body {
+  margin: 0;
 }
 
-.dropdown {
-  display: inline-block;
-  margin: 16px;
-  position: relative;
-}
-
-.menu-button {
-  padding: 16px;
-  background-color: rgba(0, 100, 0, 0.8);
-  display: inline-block;
-  color: white;
-}
-
-.menu-button:hover {
-  font-size: 16px;
-  background-color: rgba(0, 100, 0, 1);
-  color: white;
-  cursor: pointer;
-  display: block;
-}
-
-.menu-list {
-  position: absolute;
-  display: none;
-  margin: 0px;
-  padding: 0px;
-  background-color: lightcyan;
-  color: black;
-  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
-  min-width: 120px;
+.header {
+  position: fixed;
+  background-color: darkturquoise;
+  height: 40px;
+  width: 100%;
   z-index: 1;
-  list-style: none;
 }
 
-.menu-item {
-  padding: 16px;
+.navigation {
+  position: absolute;
+  height: 40px;
 }
 
-.menu-item:hover {
-  background-color: ghostwhite;
+.nav-list {
+  position: relative;
+  height: 40px;
+  margin: 0;
 }
 
-.dropdown:hover .menu-list {
-  display: block;
+.nav-item {
+  position: relative;
+  color: white;
+  float: left;
+  margin-left: 16px;
+  /* delete marker */
+  list-style-type: none;
+  line-height: 40px;
+}
+
+/* ------------- Bear ------------------ */
+
+.content {
+  position: relative;
+  height: 5000px;
+  width: 100%;
+  background-color: beige;
+  z-index: 0;
+}
+
+.head {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: calc(50vh - 100px);
+  left: calc(50% - 100px);
+  background-color: aquamarine;
+}
+
+.ear {
+  position: relative;
+  width: 40px;
+  height: 60px;
+  background-color: brown;
+  bottom: 60px;
+}
+
+.ear_right {
+  right: 40px;
+  float: left;
+}
+
+.ear_left {
+  left: 40px;
+  float: right;
+}
+
+.eye {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: grey;
+  top: 80px;
+}
+
+.eye_right {
+  float: left;
+}
+
+.eye_left {
+  float: right;
 }
