@@ -1,26 +1,8 @@
-export const createCalculator = () => {
-  let memory = 0;
+function run() {
+  var a = 0,
+    b = 1;
 
-  function add(number) {
-    memory += number;
+  if (a == b) {
+    return c;
   }
-
-  function decrease(number) {
-    memory -= number;
-  }
-
-  function reset() {
-    memory = 0;
-  }
-
-  function getMemo() {
-    return memory;
-  }
-
-  return {
-    add,
-    decrease,
-    reset,
-    getMemo,
-  };
-};
+}
