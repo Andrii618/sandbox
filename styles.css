@@ -1,86 +1,81 @@
-body {
-  margin: 0;
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .header {
-  position: fixed;
-  background-color: darkturquoise;
+  display: flex;
+  align-items: center;
   height: 40px;
-  width: 100%;
-  z-index: 1;
+  background-color: yellow;
 }
 
 .navigation {
-  position: absolute;
-  height: 40px;
-}
-
-.nav-list {
-  position: relative;
-  height: 40px;
   margin: 0;
+  display: flex;
+  list-style-type: none;
+  padding-inline-start: 0;
 }
 
-.nav-item {
-  position: relative;
-  color: white;
-  float: left;
+.navigation_item {
   margin-left: 16px;
-  /* delete marker */
+  /* margin: 16px; */
+}
+
+/* ------------ main_content ------------*/
+
+.content {
+  display: flex;
+  flex-grow: 1;
+}
+
+.dashboard {
+  display: flex;
+  flex-grow: 1;
+  background-color: pink;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ------------ left_content ------------*/
+
+.news {
+  display: flex;
+  width: 200px;
+  background-color: grey;
+  flex-direction: column;
+  padding: 16px 0;
+}
+
+.news_header {
+  display: flex;
+  justify-content: center;
+}
+
+.news_item {
+  display: flex;
+  flex-direction: column;
+  padding-inline-start: 16px;
+}
+
+.aside_item {
   list-style-type: none;
   line-height: 40px;
 }
 
-/* ------------- Bear ------------------ */
-
-.content {
-  position: relative;
-  height: 5000px;
-  width: 100%;
-  background-color: beige;
-  z-index: 0;
+h2 {
+  margin: 0;
 }
 
-.head {
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  top: calc(50vh - 100px);
-  left: calc(50% - 100px);
-  background-color: aquamarine;
+/* ------------ right_content ------------*/
+
+.footer {
+  display: flex;
+  height: 40px;
+  background-color: green;
 }
 
-.ear {
-  position: relative;
-  width: 40px;
-  height: 60px;
-  background-color: brown;
-  bottom: 60px;
-}
-
-.ear_right {
-  right: 40px;
-  float: left;
-}
-
-.ear_left {
-  left: 40px;
-  float: right;
-}
-
-.eye {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: grey;
-  top: 80px;
-}
-
-.eye_right {
-  float: left;
-}
-
-.eye_left {
-  float: right;
+.footer_text {
+  margin: auto;
 }
