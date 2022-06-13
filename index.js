@@ -1,15 +1,13 @@
-const start = 1;
-const end = 10;
-let result = 0;
+const getSum = (start, end) => {
+  let number = start - 1;
+  return Array(end - start + 1)
+    .fill()
+    .map((el) => {
+      number += 1;
+      return (el = number);
+    })
+    .filter((el) => el % 2 === 0)
+    .reduce((acc, el) => (acc += el));
+};
 
-for(let number = start; number <= end; number += 1) {
-    if (number % 5 === 0) {
-        console.log(number);
-    } else if (number % 2 === 0 && number % 4 !== 0) {
-        result += number;
-    } else if (number % 3 === 0) {
-        result -= number;
-    } else if (number % 4 === 0) {
-    result *= number
-}
-}
+console.log(getSum(10, 12));
