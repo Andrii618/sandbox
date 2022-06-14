@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>One more gallery</title>
+    <title>Checkbox</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
@@ -10,46 +10,41 @@
       crossorigin="anonymous"
     />
     <style>
-      * {
-        box-sizing: border-box;
-      }
-
-      .gallery {
-        display: flex;
-      }
-
-      .image {
+      .checkbox {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        font-size: 24px;
         margin: 16px;
-        background-size: cover;
-        height: 200px;
-        width: 200px;
-        border: 1px dotted gray;
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
+      }
+
+      input[type='checkbox'] {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+      }
+
+      .checkmark {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 25px;
+        height: 25px;
+        background-color: #d3d3d3;
+      }
+
+      .checkbox input:checked + .checkmark {
+        background-color: #006400;
       }
     </style>
   </head>
+
   <body>
-    <div class="gallery">
-      <div
-        class="image"
-        style="
-          background-image: url(https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson+13/hw1/nature1.jpeg);
-        "
-      ></div>
-      <div
-        class="image"
-        style="
-          background-image: url(https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson+13/hw1/nature2.jpeg);
-        "
-      ></div>
-      <div
-        class="image"
-        style="
-          background-image: url(https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson+13/hw1/nature3.jpeg);
-        "
-      ></div>
-    </div>
+    <label class="checkbox"
+      >Checkbox
+      <input type="checkbox" />
+      <span class="checkmark"></span>
+    </label>
   </body>
 </html>

@@ -1,13 +1,11 @@
-const getSum = (start, end) => {
-  let number = start - 1;
-  return Array(end - start + 1)
-    .fill()
-    .map((el) => {
-      number += 1;
-      return (el = number);
-    })
-    .filter((el) => el % 2 === 0)
-    .reduce((acc, el) => (acc += el));
-};
+function getSpecialNumbers(from, to) {
+  return Array.from(
+    { length: to - from + 1 },
+    (value, index) => index + from
+  ).filter((el) => el % 3 === 0);
+}
 
-console.log(getSum(10, 12));
+// examples
+console.log(getSpecialNumbers(1, 10)); // ==> [3, 6, 9]
+console.log(getSpecialNumbers(-10, 10)); // ==> [-9, -6, -3, 0, 3, 6, 9]
+console.log(getSpecialNumbers(1, 2)); // ==> [ ]
